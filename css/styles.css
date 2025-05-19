@@ -1,0 +1,462 @@
+/* Global Styles */
+:root {
+    --primary-color: #E91E63; /* Red from the image */
+    --secondary-color: #666666; /* Grey */
+    --accent-color: #333333; /* Dark grey */
+    --text-color: #333333; /* Dark grey */
+    --border-color: #CCCCCC; /* Light grey */
+    --background-color: #F5F5F5; /* Very light grey */
+}
+
+/* Header Styles */
+.chapter-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.chapter-header h1 {
+    color: black;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    color: var(--primary-color); /* Red */
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    text-align: center; /* Ensure subtitles are centered */
+}
+
+.chapter-intro {
+    text-align: left;
+}
+
+.chapter-header h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.618;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none; /* Remove underline by default */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid var(--border-color); /* Added for visible outline */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: black;
+}
+
+/* Cover Styles */
+.cover {
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cover .logo {
+    margin: 2rem auto;
+    max-width: 200px;
+    display: block;
+}
+
+.cover .cover-image {
+    margin: 3rem auto;
+    max-width: 100%;
+    display: block;
+}
+
+.cover .cover-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Foreword Styles */
+blockquote {
+    border-left: 4px solid var(--primary-color);
+    margin: 1.5rem 0;
+    padding: 1rem 0 1rem 2rem;
+    font-style: italic;
+}
+
+.emphasis {
+    font-size: 1.2em;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.highlight-section {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.content-section {
+    margin: 2.5rem 0;
+}
+
+/* Checklist Styles */
+.checklist ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.checklist li {
+    margin: 1rem 0;
+}
+
+.checklist label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.checklist input[type="checkbox"] {
+
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: var(--primary-color);
+}
+
+/* Chapter Styles */
+.chapter {
+    max-width: 742px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.chapter-subtitle {
+    text-align: center;
+    color: var(--primary-color); /* Changed from --secondary-color to --primary-color */
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.chapter-image {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.chapter-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.chapter-image figcaption {
+    color: var(--text-color);
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.chapter-image-container {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.chapter-image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Helps with centering and removing extra space */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px; /* Optional: if you want rounded corners like other chapter images */
+}
+
+.chapter-image-container figcaption {
+    color: var(--text-color);
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+/* Example Blocks */
+.example-block {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.example-problem {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.example-solution {
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Prompt Styles */
+.prompt-example {
+    background-color: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.prompt-code {
+    background-color: #1E1E1E;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.prompt-code h4,
+.prompt-code h5 {
+    color: #FF6B6B; /* Lighter red for better contrast on dark .prompt-code background */
+}
+
+.prompt-code pre {
+    background-color: #1E1E1E;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: monospace;
+    color: #FFFFFF;
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.refiner-prompt {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px dashed var(--border-color);
+}
+
+/* Separators */
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 1.5rem 0;
+}
+
+/* Navigation */
+.chapter-navigation {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--primary-color);
+}
+
+.prev-next-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.prev-link, .next-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.prev-link:hover, .next-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Top and Bottom Chapter Navigation Bar */
+/* Align header nav and footer to container width */
+body > nav.chapter-nav,
+body > footer.footer {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem; /* Match container padding */
+    padding-right: 2rem; /* Match container padding */
+    box-sizing: border-box; /* Ensure padding is included in max-width */
+}
+
+.chapter-nav {
+    display: flex;
+    justify-content: space-between; /* Distributes Home, Prev, Next */
+    align-items: center;
+    padding-top: 1rem; /* Vertical padding */
+    padding-bottom: 1rem; /* Vertical padding */
+    margin-bottom: 1rem; /* Space below top nav */
+}
+
+/* Specific adjustments for the navigation within the footer */
+.footer p {
+    text-align: center;
+}
+
+.footer .chapter-nav {
+    margin-top: 1rem; /* Space above footer nav */
+    margin-bottom: 0; /* Remove bottom margin if header nav added it */
+}
+
+.chapter-nav .nav-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin: 0 0.25rem; /* Small margin between links if they are close */
+    white-space: nowrap; /* Prevent text wrapping inside button */
+    text-align: center; /* Ensure text is centered if it ever wraps */
+}
+
+.chapter-nav .nav-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Styling for disabled navigation links */
+.chapter-nav .nav-link-disabled {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color); /* Muted border */
+    border-radius: 4px;
+    margin: 0 0.25rem;
+    white-space: nowrap;
+    text-align: center;
+    cursor: default; /* Indicate it's not clickable */
+    background-color: var(--background-color); /* Light background to look disabled */
+}
+
+/* Summary Styles */
+.chapter-summary {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+}
+
+.summary-checklist {
+    list-style: none;
+    padding-left: 0;
+}
+
+.summary-checklist li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.summary-checklist li::before {
+    content: ""; /* Changed from "✓" to an empty string to remove the tick */
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+/* Accessibility */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Prompt Header and Copy Button Styles */
+.prompt-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem; /* Space between header and pre block */
+}
+
+.prompt-header h4 {
+    margin: 0; /* Remove default margins from h4 if it's inside flex */
+    color: #FF6B6B; /* Ensuring visibility on dark prompt-code bg, consistent with other h4 in prompt-code */
+}
+
+.copy-button { /* Renamed class selector */
+    background-color: #f0f0f0;    /* Light grey background for high contrast on dark prompt-code area */
+    color: #333333;               /* Dark grey text for readability */
+    border: 1px solid #333333;    /* Dark grey border */
+    padding: 0.3em 0.7em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;             /* Slightly smaller font for the button text/icon */
+    font-weight: bold;            /* Make text pop a bit more */
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    line-height: 1;               /* Ensure icon/text is vertically centered if emoji used */
+    margin-bottom: 0.75rem;       /* Space before the <pre> block */
+    display: inline-block;        /* Ensure it behaves well with margins */
+}
+
+.copy-button:hover {
+    background-color: var(--primary-color); /* Theme red background on hover */
+    color: #FFFFFF;                       /* White text on hover */
+    border-color: var(--primary-color);     /* Theme red border on hover */
+}
+
+.copy-button:disabled { /* For "Copied!" state */
+    background-color: #4CAF50;    /* Solid green background for success */
+    color: #FFFFFF;               /* White text */
+    border-color: #388E3C;        /* Darker green border */
+    font-weight: bold;            /* Maintain bold text */
+    cursor: default;
+}
+
+
+/* Print Styles */
+@media print {
+    .chapter {
+        box-shadow: none;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .prev-next-links {
+        display: none;
+    }
+}
