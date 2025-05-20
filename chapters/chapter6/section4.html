@@ -8,9 +8,16 @@
 </head>
 <body>
     <nav class="chapter-nav">
-        <a href="../../index.html" class="nav-link">Home</a>
-        <a href="section3.html" class="nav-link">Previous: 6.3: Drafting Quick Progress Reports (For Self or Internal Use)</a>
-        <a href="summary.html" class="nav-link">Next: Chapter 6 Summary: Mastering Your Workday Flow with AI</a>
+        <div class="text-size-controls">
+            <button id="font-decrease-button" title="Decrease text size" aria-label="Decrease text size">A-</button>
+            <button id="font-reset-button" title="Reset text size" aria-label="Reset text size">A</button>
+            <button id="font-increase-button" title="Increase text size" aria-label="Increase text size">A+</button>
+        </div>
+        <div class="main-nav-links">
+            <a href="../../index.html" class="nav-link">Home</a>
+            <a href="section3.html" class="nav-link">Previous: 6.3: Drafting Quick Progress Reports (For Self or Internal Use)</a>
+            <a href="summary.html" class="nav-link">Next: Chapter 6 Summary: Mastering Your Workday Flow with AI</a>
+        </div>
     </nav>
     <main role="main" class="container">
         <article class="chapter">
@@ -41,8 +48,10 @@
                         <p>A tangible, visual starting point for a time-blocked weekly schedule that you can refine. This can help you be more intentional about how you spend your time, protect your focus for important tasks, and increase your overall productivity and sense of control over your workday.</p>
                     </div>
                     <div class="prompt-code">
-                        <h4>Copy & Modify This Prompt</h4>
-                        <button class="copy-button" onclick="copyPrompt(this)">Copy Prompt</button>
+                        <div class="prompt-header">
+                            <h4>Copy & Modify This Prompt</h4>
+                            <button class="copy-prompt-button" title="Copy prompt to clipboard">[Copy]</button>
+                        </div>
                         <pre>Act as a productivity coach. I'm trying to implement time blocking to improve my focus and would like help creating a sample schedule outline for next week (e.g., Monday, May 12th - Friday, May 16th, 2025).
 
 My key priorities/tasks for the week, with estimated times, are:
@@ -78,8 +87,10 @@ Please suggest a possible weekly schedule outline that blocks out dedicated time
                         <p>A time-blocked schedule outline that is not only well-structured around your priorities but is also more resilient to unexpected events, supportive of your natural work rhythms, and encourages ongoing adaptation, leading to more consistent and less stressful productivity.</p>
                     </div>
                     <div class="prompt-code">
-                        <h4>Copy & Modify This Refiner Prompt</h4>
-                        <button class="copy-button" onclick="copyPrompt(this)">Copy Prompt</button>
+                        <div class="prompt-header">
+                            <h4>Copy & Modify This Refiner Prompt</h4>
+                            <button class="copy-prompt-button" title="Copy prompt to clipboard">[Copy]</button>
+                        </div>
                         <pre>Review the suggested time-blocked schedule outline for next week [or paste the schedule here]. Now, enhance this schedule in ONE of the following ways:
 
 1. Integrate Explicit Buffer/Contingency Time: Revise the schedule to strategically insert short (15-20 minute) buffer blocks between major timed activities. Additionally, add one or two larger "Contingency Blocks" (e.g., 1 hour each) during the week to absorb unexpected tasks or overruns.
