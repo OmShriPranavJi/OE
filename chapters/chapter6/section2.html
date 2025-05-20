@@ -8,9 +8,16 @@
 </head>
 <body>
     <nav class="chapter-nav">
-        <a href="../../index.html" class="nav-link">Home</a>
-        <a href="section1.html" class="nav-link">Previous: 6.1: Breaking Down Goals into Actionable Tasks</a>
-        <a href="section3.html" class="nav-link">Next: 6.3 Drafting Quick Progress Reports</a>
+        <div class="text-size-controls">
+            <button id="font-decrease-button" title="Decrease text size" aria-label="Decrease text size">A-</button>
+            <button id="font-reset-button" title="Reset text size" aria-label="Reset text size">A</button>
+            <button id="font-increase-button" title="Increase text size" aria-label="Increase text size">A+</button>
+        </div>
+        <div class="main-nav-links">
+            <a href="../../index.html" class="nav-link">Home</a>
+            <a href="section1.html" class="nav-link">Previous: 6.1: Breaking Down Goals into Actionable Tasks</a>
+            <a href="section3.html" class="nav-link">Next: 6.3 Drafting Quick Progress Reports</a>
+        </div>
     </nav>
     <main role="main" class="container">
         <article class="chapter">
@@ -41,8 +48,10 @@
                         <p>A more clearly prioritized to-do list that helps you focus your energy on the most critical and time-sensitive tasks first. This can lead to increased productivity, reduced stress from feeling overwhelmed, and a greater sense of accomplishment at the end of the day.</p>
                     </div>
                     <div class="prompt-code">
-                        <h4>Copy & Modify This Prompt</h4>
-                        <button class="copy-button" onclick="copyPrompt(this)">Copy Prompt</button>
+                        <div class="prompt-header">
+                            <h4>Copy & Modify This Prompt</h4>
+                            <button class="copy-prompt-button" title="Copy prompt to clipboard">[Copy]</button>
+                        </div>
                         <pre>Act as an executive assistant helping me organize my workload. Here is my list of tasks for [Today/This Week]:
 
 [Task 1, e.g., 'Draft proposal for Client X'] - Deadline: [e.g., 'End of day Tuesday'] - Importance: [e.g., 'High - Potential new business']
@@ -69,8 +78,10 @@ Please help me organize these into a prioritized to-do list for [Today/This Week
                         <p>A prioritized to-do list that is further enhanced with time considerations, efficiency strategies like task batching, potential delegation points, and a guiding theme, enabling you to approach your workday with even greater clarity and productivity.</p>
                     </div>
                     <div class="prompt-code">
-                        <h4>Copy & Modify This Refiner Prompt</h4>
-                        <button class="copy-button" onclick="copyPrompt(this)">Copy Prompt</button>
+                        <div class="prompt-header">
+                            <h4>Copy & Modify This Refiner Prompt</h4>
+                            <button class="copy-prompt-button" title="Copy prompt to clipboard">[Copy]</button>
+                        </div>
                         <pre>Review the prioritized to-do list for [Today/This Week] [or paste the list here]. Now, enhance this list in ONE of the following ways:
 
 1. Add Estimated Time Durations: For each task (or at least the top 3-5 priority tasks) on the list, suggest a rough, realistic time estimate needed for completion. (I understand these are estimates and I will adjust them).
