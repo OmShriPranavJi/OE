@@ -307,6 +307,13 @@ hr {
 
 /* Top and Bottom Chapter Navigation Bar */
 /* Align header nav and footer to container width */
+body > nav.chapter-nav {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    /* Existing padding, margin, etc., will be inherited or should be re-declared if specific */
+}
+
 body > nav.chapter-nav,
 body > footer.footer {
     max-width: 1200px;
@@ -448,6 +455,45 @@ body > footer.footer {
 }
 
 
+/* Styles for Text Size Controls */
+.text-size-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem; /* Small gap between buttons */
+    margin-bottom: 0.5rem; /* Space below controls before nav links */
+    /* margin-left: auto; Removed as it's no longer needed for right alignment in a column flex */
+}
+
+.text-size-controls button {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.25em 0.6em; /* Adjusted padding for better button shape */
+    font-size: 0.85em; /* Slightly smaller than nav-link text */
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    line-height: 1; /* Ensures text is centered vertically */
+    min-width: 2em; /* Ensures buttons have a decent minimum width */
+    text-align: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.text-size-controls button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Styling for the wrapper of main navigation links */
+.main-nav-links {
+    display: flex; /* Lay out links in a row */
+    justify-content: center; /* Center the group of links on the line */
+    align-items: center; /* Vertically align items in the .main-nav-links div */
+    flex-wrap: wrap; /* Allow wrapping on very small screens, though unlikely */
+    gap: 0.75rem; /* Space between nav items */
+    width: 100%; /* Ensure it takes full width to center its content properly */
+}
+
 /* Print Styles */
 @media print {
     .chapter {
@@ -459,4 +505,36 @@ body > footer.footer {
     .prev-next-links {
         display: none;
     }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+    .container {
+        padding: 1rem; /* Reduced from 2rem for mobile */
+    }
+
+    .chapter {
+        padding: 1rem; /* Reduced from 2rem for mobile */
+    }
+
+    body > nav.chapter-nav,
+    body > footer.footer {
+        padding-left: 1rem;  /* Reduced from 2rem for mobile */
+        padding-right: 1rem; /* Reduced from 2rem for mobile */
+    }
+
+    .chapter-nav .nav-link {
+        white-space: normal; /* Allow text to wrap on smaller screens */
+    }
+}
+
+/* Responsive adjustments for very small screens */
+@media (max-width: 399px) {
+    .container,
+    .chapter {
+        padding-left: 0.75rem;  /* Further reduce for very narrow screens */
+        padding-right: 0.75rem; /* Further reduce for very narrow screens */
+    }
+    /* Consider reducing h1 font-size if needed for very small screens */
+    /* h1 { font-size: 1.8rem; } */
 }
